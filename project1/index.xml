@@ -1,0 +1,52 @@
+<!ELEMENT customers (customer+)>
+<!ELEMENT customer (id, name, email, phone, address, internalNotes?)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT address (street, city, state, zip)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT internalNotes (note*)>
+<!ELEMENT note (#PCDATA)>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE customers SYSTEM "customers.dtd">
+<customers>
+    <customer>
+        <id>1</id>
+        <name>John Doe</name>
+        <email>john.doe@example.com</email>
+        <phone>123-456-7890</phone>
+        <address>
+            <street>123 Main St</street>
+            <city>Springfield</city>
+            <state>IL</state>
+            <zip>62701</zip>
+        </address>
+        <internalNotes>
+            <note>Preferred contact method: Email</note>
+            <note>VIP customer</note>
+        </internalNotes>
+    </customer>
+    <customer>
+        <id>2</id>
+        <name>Jane Smith</name>
+        <email>jane.smith@example.com</email>
+        <phone>987-654-3210</phone>
+        <address>
+            <street>456 Elm St</street>
+            <city>Metropolis</city>
+            <state>NY</state>
+            <zip>10001</zip>
+        </address>
+        <internalNotes>
+            <note>Preferred contact method: Phone</note>
+            <note>Frequent returns</note>
+        </internalNotes>
+    </customer>
+</customers>
